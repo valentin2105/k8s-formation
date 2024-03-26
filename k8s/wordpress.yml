@@ -47,21 +47,3 @@ spec:
         ports:
         - containerPort: 80
           name: wordpress
-        volumeMounts:
-
-        - name: wordpress-php-options
-          mountPath: "/usr/local/etc/php/conf.d/wordpress.ini"
-          subPath: wordpress.ini
-        - name: wordpress-php-options
-          mountPath: "/usr/local/etc/php/php.ini-development"
-          subPath: wordpress.ini
-        - name: wordpress-php-options
-          mountPath: "/usr/local/etc/php/php.ini-production"
-          subPath: wordpress.ini
-        - name: wordpress-php-options
-          mountPath: "/etc/apache2/conf-available/security.conf"
-          subPath: apache-security.conf
-
-      - name: wordpress-php-options
-        configMap:
-          name: wordpress-php-options
