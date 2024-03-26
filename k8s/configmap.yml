@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wordpress-php-options
+data:
+  wordpress.ini: |
+    file_uploads = On
+    memory_limit 512M
+    upload_max_filesize 1024M
+    post_max_size 128M
+    max_execution_time 300
+    max_input_time 1000    
+    max_input_vars 2000
+    expose_php = off
+  apache-security.conf: |
+    ServerTokens Prod
+    ServerSignature Off
+    TraceEnable Off
