@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: wordpress-test.foo.bar.com
+  - host: wordpress.localhost
     http:
       paths:
       - backend:
