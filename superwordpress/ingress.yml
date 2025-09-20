@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: wp
 spec:
-  ingressClassName: traefik
+  ingressClassName: nginx
   rules:
   - host: superwordpress.k8s.local
     http:
